@@ -68,9 +68,111 @@
                   </div>
                 </li>
                 @endif
+
+                @if (Auth::user()->can('menu.testimonial'))
+                <li class="nav-item">
+                  <a class="nav-link" data-bs-toggle="collapse" href="#testimonial" role="button" aria-expanded="false" aria-controls="testimonial">
+                    <i class="link-icon" data-feather="feather"></i>
+                    <span class="link-title">Property Category</span>
+                    <i class="link-arrow" data-feather="chevron-down"></i>
+                  </a>
+                  <div class="collapse" id="testimonial">
+                    <ul class="nav sub-menu">
+                      
+                      @if (Auth::user()->can('all.testimonial'))
+                      <li class="nav-item">
+                        <a href="{{ route('all.category') }}" class="nav-link">All Category</a>
+                      </li>
+                      @endif
+                      @if (Auth::user()->can('add.testimonial'))
+                      <li class="nav-item">
+                        <a href="{{route('add.category')}}" class="nav-link">Add Category</a>
+                      </li>
+                      @endif
+                    </ul>
+                  </div>
+                </li>
+
+                @endif
                 
 
 
+
+
+                {{-- Components --}}
+
+                <li class="nav-item nav-category">Components</li>
+                @if (Auth::user()->can('menu.slider'))
+                <li class="nav-item">
+                  <a class="nav-link" data-bs-toggle="collapse" href="#uiComponents" role="button" aria-expanded="false" aria-controls="uiComponents">
+                    <i class="link-icon" data-feather="feather"></i>
+                    <span class="link-title">Slider</span>
+                    <i class="link-arrow" data-feather="chevron-down"></i>
+                  </a>
+                  <div class="collapse" id="uiComponents">
+                    <ul class="nav sub-menu">
+                      
+                      @if (Auth::user()->can('all.slider'))
+                      <li class="nav-item">
+                        <a href="{{ route('all.slider') }}" class="nav-link">All Slider</a>
+                      </li>
+                      @endif
+                      @if (Auth::user()->can('add.slider'))
+                      <li class="nav-item">
+                        <a href="{{ route('add.slider') }}" class="nav-link">Add Slider</a>
+                      </li>
+                      @endif
+                    </ul>
+                  </div>
+                </li>
+
+                @endif
+
+
+                @if (Auth::user()->can('menu.testimonial'))
+                <li class="nav-item">
+                  <a class="nav-link" data-bs-toggle="collapse" href="#testimonial" role="button" aria-expanded="false" aria-controls="testimonial">
+                    <i class="link-icon" data-feather="feather"></i>
+                    <span class="link-title">Testimonial</span>
+                    <i class="link-arrow" data-feather="chevron-down"></i>
+                  </a>
+                  <div class="collapse" id="testimonial">
+                    <ul class="nav sub-menu">
+                      
+                      @if (Auth::user()->can('all.testimonial'))
+                      <li class="nav-item">
+                        <a href="{{ route('all.testimonial') }}" class="nav-link">All Testimonial</a>
+                      </li>
+                      @endif
+                      @if (Auth::user()->can('add.testimonial'))
+                      <li class="nav-item">
+                        <a href="{{route('add.testimonial')}}" class="nav-link">Add Testimonial</a>
+                      </li>
+                      @endif
+                    </ul>
+                  </div>
+                </li>
+
+                @endif
+
+
+
+
+               
+        
+                <li class="nav-item">
+                  <a href="pages/apps/chat.html" class="nav-link">
+                    <i class="link-icon" data-feather="message-square"></i>
+                    <span class="link-title">Chat</span>
+                  </a>
+                </li>
+
+
+
+
+
+                {{-- Role And Permission --}}
+                
                 <li class="nav-item nav-category">Role And Permission</li>
                 <li class="nav-item">
                   <a class="nav-link" data-bs-toggle="collapse" href="#roles" role="button" aria-expanded="false" aria-controls="emails">
@@ -136,51 +238,7 @@
                   </div>
                 </li>
 
-                <li class="nav-item">
-                  <a href="pages/apps/chat.html" class="nav-link">
-                    <i class="link-icon" data-feather="message-square"></i>
-                    <span class="link-title">Chat</span>
-                  </a>
-                </li>
 
-                <li class="nav-item nav-category">Components</li>
-                <li class="nav-item">
-                  <a class="nav-link" data-bs-toggle="collapse" href="#uiComponents" role="button" aria-expanded="false" aria-controls="uiComponents">
-                    <i class="link-icon" data-feather="feather"></i>
-                    <span class="link-title">UI Kit</span>
-                    <i class="link-arrow" data-feather="chevron-down"></i>
-                  </a>
-                  <div class="collapse" id="uiComponents">
-                    <ul class="nav sub-menu">
-                      <li class="nav-item">
-                        <a href="pages/ui-components/accordion.html" class="nav-link">Accordion</a>
-                      </li>
-                      <li class="nav-item">
-                        <a href="pages/ui-components/alerts.html" class="nav-link">Alerts</a>
-                      </li>
-                 
-                    </ul>
-                  </div>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" data-bs-toggle="collapse" href="#advancedUI" role="button" aria-expanded="false" aria-controls="advancedUI">
-                    <i class="link-icon" data-feather="anchor"></i>
-                    <span class="link-title">Advanced UI</span>
-                    <i class="link-arrow" data-feather="chevron-down"></i>
-                  </a>
-                  <div class="collapse" id="advancedUI">
-                    <ul class="nav sub-menu">
-                      <li class="nav-item">
-                        <a href="pages/advanced-ui/cropper.html" class="nav-link">Cropper</a>
-                      </li>
-                      <li class="nav-item">
-                        <a href="pages/advanced-ui/owl-carousel.html" class="nav-link">Owl carousel</a>
-                      </li>
-                      
-                    </ul>
-                  </div>
-                </li>
-        
 
                 <li class="nav-item nav-category">Docs</li>
                 <li class="nav-item">

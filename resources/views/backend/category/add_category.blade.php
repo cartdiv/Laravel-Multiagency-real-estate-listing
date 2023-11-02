@@ -9,26 +9,15 @@
 					<div class="col-md-12 grid-margin stretch-card">
 						<div class="card">
 							<div class="card-body">
-								<h6 class="card-title">Add Permission</h6>
-								<form id="myForm" method="POST" action="{{route('store.permission')}}">
+								<h6 class="card-title">Add Category</h6>
+								<form id="myForm" method="POST" action="{{route('store.category')}}">
                                     @csrf
 									<div class="form-group mb-3">
-										<label for="exampleInputText1" class="form-label">Permission Name</label>
-										<input type="text" class="form-control" name="name" placeholder="Permission Name">
+										<label for="exampleInputText1" class="form-label">Category Name</label>
+										<input type="text" class="form-control" name="category_name">
 									</div>
 
-                                    <div class="form-group mb-3">
-										<label for="exampleInputText1" class="form-label">Group Name</label>
-										<select class="form-select" name="group_name" id="exampleFormControlSelect1">
-											<option selected="" disabled="">Select Group</option>
-											<option value="type">Property Type</option>
-											<option value="amenities">Amenities</option>
-											<option value="component">Component</option>
-										</select>
-                                    </div>
-
-                                    
-									<button class="btn btn-primary" type="submit">Save Permission</button>
+									<button class="btn btn-primary" type="submit">Add Category</button>
 								</form>
 							</div>
 						</div>
@@ -41,22 +30,14 @@
             $(document).ready(function (){
                 $('#myForm').validate({
                     rules: {
-                        name: {
-                            required : true,
-                        }, 
-
-                        group_name: {
+                        category_name: {
                             required : true,
                         }, 
                         
                     },
                     messages :{
-                        name: {
-                            required : 'Please Enter Permission Name',
-                        }, 
-
-                        group_name: {
-                            required : 'Please Enter Permission Group',
+                        category_name: {
+                            required : 'Please Enter Category Name',
                         }, 
                          
         

@@ -1,5 +1,8 @@
 <?php
 
+use App\Http\Controllers\Admin\CategoryController;
+use App\Http\Controllers\Admin\SliderController;
+use App\Http\Controllers\Admin\TestimonialController;
 use App\Http\Controllers\AdminController;
 use App\Http\Controllers\AgentController;
 use App\Http\Controllers\Backend\PropertyTypeController;
@@ -117,6 +120,34 @@ Route::middleware(['auth','roles:admin'])->group(function(){
 
 
 
+    });
+
+
+    Route::controller(SliderController::class)->group(function(){
+        Route::get('/all/sliders', 'AllSlider')->name('all.slider');
+        Route::get('/add/sliders', 'AddSlider')->name('add.slider');
+        Route::post('/create/sliders', 'CreateSlider')->name('create.slider');
+        Route::post('/update/sliders', 'UpdateSlider')->name('update.slider');
+        Route::get('/edit/sliders/{id}', 'EditSlider')->name('edit.slider');
+        Route::get('/delete/sliders/{id}', 'DeleteSlider')->name('delete.slider');
+    });
+
+    Route::controller(TestimonialController::class)->group(function(){
+        Route::get('/all/testimonial', 'AllTestimonial')->name('all.testimonial');
+        Route::get('/add/testimonial', 'AddTestimonial')->name('add.testimonial');
+        Route::post('/create/testimonial', 'CreateTestimonial')->name('create.testimonial');
+        Route::post('/update/testimonial', 'UpdateTestimonial')->name('update.testimonial');
+        Route::get('/edit/testimonial/{id}', 'EditTestimonial')->name('edit.testimonial');
+        Route::get('/delete/testimonial/{id}', 'DeleteTestimonial')->name('delete.testimonial');
+    });
+
+    Route::controller(CategoryController::class)->group(function(){
+        Route::get('/all/category', 'AllCategory')->name('all.category');
+        Route::get('/add/category', 'AddCategory')->name('add.category');
+        Route::post('/store/category', 'StoreCategory')->name('store.category');
+        Route::post('/update/category', 'UpdateCategory')->name('update.category');
+        Route::get('/edit/category/{id}', 'EditCategory')->name('edit.category');
+        Route::get('/delete/category/{id}', 'DeleteCategory')->name('delete.category');
     });
 
 });//Admin Middleware
