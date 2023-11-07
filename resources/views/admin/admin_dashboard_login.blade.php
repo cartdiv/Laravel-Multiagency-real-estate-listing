@@ -57,6 +57,8 @@
                     <h5 class="text-muted fw-normal mb-4">Welcome back! Log in to your account.</h5>
                     <form class="forms-sample" method="post" action="{{ route('login') }}">
                         @csrf
+                        <x-input-error :messages="$errors->get('login')" class="mt-2" style="color: red;" />
+                          <x-input-error :messages="$errors->get('password')" class="mt-2" style="color: red;" />
                         <div class="mb-3">
                         <label for="userEmail" class="form-label">Email/Name/Phone</label>
                         <input type="text" class="form-control" name="login" id="userEmail" placeholder="Email">

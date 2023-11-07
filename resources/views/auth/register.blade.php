@@ -63,6 +63,10 @@ License: For each use you must have a valid license purchased only from above li
                     <h5 class="text-muted fw-normal mb-4">Create a free account.</h5>
                     <form class="forms-sample" method="POST" action="{{ route('register') }}">
                         @csrf
+                        <x-input-error :messages="$errors->get('name')" class="mt-2" style="color: red;" />
+                          <x-input-error :messages="$errors->get('email')" class="mt-2" style="color: red;" />
+                          <x-input-error :messages="$errors->get('password')" class="mt-2" style="color: red;" />
+                          <x-input-error :messages="$errors->get('password_confirmation')" class="mt-2" style="color: red;" />
                         <div class="mb-3">
                             <label for="exampleInputUsername1" class="form-label">Name</label>
                             <input type="text" class="form-control" name="name" id="exampleInputUsername1" autocomplete="Username" placeholder="Username">

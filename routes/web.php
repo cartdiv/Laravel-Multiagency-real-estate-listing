@@ -1,6 +1,9 @@
 <?php
 
+use App\Http\Controllers\Admin\BuildingController;
 use App\Http\Controllers\Admin\CategoryController;
+use App\Http\Controllers\Admin\PlaceController;
+use App\Http\Controllers\Admin\PropertyController;
 use App\Http\Controllers\Admin\SliderController;
 use App\Http\Controllers\Admin\TestimonialController;
 use App\Http\Controllers\AdminController;
@@ -8,6 +11,9 @@ use App\Http\Controllers\AgentController;
 use App\Http\Controllers\Backend\PropertyTypeController;
 use App\Http\Controllers\Backend\AmenitesController;
 use App\Http\Controllers\Backend\RoleController;
+use App\Http\Controllers\BlogCategoryController;
+use App\Http\Controllers\BlogController;
+use App\Http\Controllers\PartnerController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Middleware\Role;
 use Illuminate\Support\Facades\Route;
@@ -122,7 +128,7 @@ Route::middleware(['auth','roles:admin'])->group(function(){
 
     });
 
-
+//Home Slider route
     Route::controller(SliderController::class)->group(function(){
         Route::get('/all/sliders', 'AllSlider')->name('all.slider');
         Route::get('/add/sliders', 'AddSlider')->name('add.slider');
@@ -131,7 +137,7 @@ Route::middleware(['auth','roles:admin'])->group(function(){
         Route::get('/edit/sliders/{id}', 'EditSlider')->name('edit.slider');
         Route::get('/delete/sliders/{id}', 'DeleteSlider')->name('delete.slider');
     });
-
+//Testimonial route
     Route::controller(TestimonialController::class)->group(function(){
         Route::get('/all/testimonial', 'AllTestimonial')->name('all.testimonial');
         Route::get('/add/testimonial', 'AddTestimonial')->name('add.testimonial');
@@ -140,7 +146,7 @@ Route::middleware(['auth','roles:admin'])->group(function(){
         Route::get('/edit/testimonial/{id}', 'EditTestimonial')->name('edit.testimonial');
         Route::get('/delete/testimonial/{id}', 'DeleteTestimonial')->name('delete.testimonial');
     });
-
+//Property Category route
     Route::controller(CategoryController::class)->group(function(){
         Route::get('/all/category', 'AllCategory')->name('all.category');
         Route::get('/add/category', 'AddCategory')->name('add.category');
@@ -149,6 +155,69 @@ Route::middleware(['auth','roles:admin'])->group(function(){
         Route::get('/edit/category/{id}', 'EditCategory')->name('edit.category');
         Route::get('/delete/category/{id}', 'DeleteCategory')->name('delete.category');
     });
+//Property place route
+    Route::controller(PlaceController::class)->group(function(){
+        Route::get('/all/place', 'AllPlace')->name('all.place');
+        Route::get('/add/place', 'AddPlace')->name('add.place');
+        Route::post('/store/place', 'StorePlace')->name('store.place');
+        Route::post('/update/place', 'UpdatePlace')->name('update.place');
+        Route::get('/edit/place/{id}', 'EditPlace')->name('edit.place');
+        Route::get('/delete/place/{id}', 'DeletePlace')->name('delete.place');
+    });
+//Property building route
+    Route::controller(BuildingController::class)->group(function(){
+        Route::get('/all/building', 'AllBuilding')->name('all.building');
+        Route::get('/add/building', 'AddBuilding')->name('add.building');
+        Route::post('/store/building', 'StoreBuilding')->name('store.building');
+        Route::post('/update/bulding', 'UpdateBuilding')->name('update.bulding');
+        Route::get('/edit/building/{id}', 'EditBuilding')->name('edit.building');
+        Route::get('/delete/building/{id}', 'DeleteBuilding')->name('delete.building');
+    });
+
+    //Property route
+    Route::controller(PropertyController::class)->group(function(){
+        Route::get('/all/property', 'AllProperty')->name('all.property');
+        Route::get('/add/property', 'AddProperty')->name('add.property');
+        Route::post('/store/product', 'StoreProduct')->name('store.product');
+        Route::post('/update/property', 'UpdateProperty')->name('update.property');
+        Route::get('/edit/property/{id}', 'EditProperty')->name('edit.property');
+        Route::get('/delete/property/{id}', 'DeleteProperty')->name('delete.property');
+        Route::get('/inactive/property/{id}', 'InactiveProperty')->name('inactive.property');
+        Route::get('/active/property/{id}', 'ActiveProperty')->name('active.property');
+    });
+
+
+    //Parner route
+    Route::controller(PartnerController::class)->group(function(){
+        Route::get('/all/partner', 'AllPartner')->name('all.partner');
+        Route::get('/add/partner', 'AddPartner')->name('add.partner');
+        Route::post('/store/partner', 'StorePartner')->name('store.partner');
+        Route::post('/update/partner', 'UpdatePartner')->name('update.partner');
+        Route::get('/edit/partner/{id}', 'EditPartner')->name('edit.partner');
+        Route::get('/delete/partner/{id}', 'DeletePartner')->name('delete.partner');
+    });
+
+
+     //Blog Category route
+     Route::controller(BlogCategoryController::class)->group(function(){
+        Route::get('/all/blog/category', 'AllBlogCategory')->name('all.blog.category');
+        Route::get('/add/blog/category', 'AddBlogCategory')->name('add.blog.category');
+        Route::post('/store/blog/category', 'StoreBlogCategory')->name('store.blog.category');
+        Route::post('/update/blog/category', 'UpdateBlogCategory')->name('update.blog.category');
+        Route::get('/edit/blog/category/{id}', 'EditBlogCategory')->name('edit.blog.category');
+        Route::get('/delete/blog/category/{id}', 'DeleteBlogCategory')->name('delete.blog.category');
+    });
+
+
+    //Blog route
+    Route::controller(BlogController::class)->group(function(){
+    Route::get('/all/blog', 'AllBlog')->name('all.blog');
+    Route::get('/add/blog', 'AddBlog')->name('add.blog');
+    Route::post('/store/blog', 'StoreBlog')->name('store.blog');
+    Route::post('/update/blog', 'UpdateBlog')->name('update.blog');
+    Route::get('/edit/blog/{id}', 'EditBlog')->name('edit.blog');
+    Route::get('/delete/blog/{id}', 'DeleteBlog')->name('delete.blog');
+});
 
 });//Admin Middleware
 

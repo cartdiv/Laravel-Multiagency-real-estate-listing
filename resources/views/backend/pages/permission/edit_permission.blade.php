@@ -22,6 +22,8 @@
 											<option selected="" disabled="">Select Group</option>
                                             <option value="type" {{ $editpermission->group_name == 'type' ? 'selected' : '' }}>Property Type</option>
                                             <option value="amenities" {{ $editpermission->group_name == 'amenities' ? 'selected' : '' }}>Amenities</option>
+											<option value="component" {{ $editpermission->group_name == 'component' ? 'selected' : '' }}>Component</option>
+											<option value="addonpro" {{ $editpermission->group_name == 'addonpro' ? 'selected' : '' }}>Property addon</option>
 										</select>
                                     </div>
 									<button class="btn btn-primary" type="submit">Update Permission</button>

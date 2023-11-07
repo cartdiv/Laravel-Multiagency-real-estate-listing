@@ -44,7 +44,7 @@
                   </div>
                 </li>
                 @endif
-
+                
                 @if (Auth::user()->can('menu.amenities'))
                 <li class="nav-item">
                   <a class="nav-link" data-bs-toggle="collapse" href="#amenities" role="button" aria-expanded="false" aria-controls="emails">
@@ -69,24 +69,102 @@
                 </li>
                 @endif
 
-                @if (Auth::user()->can('menu.testimonial'))
+
+                @if (Auth::user()->can('menu.building'))
                 <li class="nav-item">
-                  <a class="nav-link" data-bs-toggle="collapse" href="#testimonial" role="button" aria-expanded="false" aria-controls="testimonial">
+                  <a class="nav-link" data-bs-toggle="collapse" href="#building" role="button" aria-expanded="false" aria-controls="emails">
+                    <i class="link-icon" data-feather="mail"></i>
+                    <span class="link-title">Buildings</span>
+                    <i class="link-arrow" data-feather="chevron-down"></i>
+                  </a>
+                  <div class="collapse" id="building">
+                    <ul class="nav sub-menu">
+                      @if (Auth::user()->can('all.building'))
+                      <li class="nav-item">
+                        <a href="{{route('all.building')}}" class="nav-link">All Buildings</a>
+                      </li>
+                      @endif
+                      @if (Auth::user()->can('add.building'))
+                      <li class="nav-item">
+                        <a href="{{route('add.building')}}" class="nav-link">Add Buildings</a>
+                      </li>
+                      @endif
+                    </ul>
+                  </div>
+                </li>
+                @endif
+
+
+                @if (Auth::user()->can('menu.place'))
+                <li class="nav-item">
+                  <a class="nav-link" data-bs-toggle="collapse" href="#place" role="button" aria-expanded="false" aria-controls="emails">
+                    <i class="link-icon" data-feather="mail"></i>
+                    <span class="link-title">Places</span>
+                    <i class="link-arrow" data-feather="chevron-down"></i>
+                  </a>
+                  <div class="collapse" id="place">
+                    <ul class="nav sub-menu">
+                      @if (Auth::user()->can('all.place'))
+                      <li class="nav-item">
+                        <a href="{{route('all.place')}}" class="nav-link">All Places</a>
+                      </li>
+                      @endif
+                      @if (Auth::user()->can('add.place'))
+                      <li class="nav-item">
+                        <a href="{{route('add.place')}}" class="nav-link">Add Places</a>
+                      </li>
+                      @endif
+                    </ul>
+                  </div>
+                </li>
+                @endif
+
+
+
+                @if (Auth::user()->can('menu.pcategory'))
+                <li class="nav-item">
+                  <a class="nav-link" data-bs-toggle="collapse" href="#pcategory" role="button" aria-expanded="false" aria-controls="pcategory">
                     <i class="link-icon" data-feather="feather"></i>
                     <span class="link-title">Property Category</span>
                     <i class="link-arrow" data-feather="chevron-down"></i>
                   </a>
-                  <div class="collapse" id="testimonial">
+                  <div class="collapse" id="pcategory">
                     <ul class="nav sub-menu">
                       
-                      @if (Auth::user()->can('all.testimonial'))
+                      @if (Auth::user()->can('all.pcategory'))
                       <li class="nav-item">
                         <a href="{{ route('all.category') }}" class="nav-link">All Category</a>
                       </li>
                       @endif
-                      @if (Auth::user()->can('add.testimonial'))
+                      @if (Auth::user()->can('add.pcategory'))
                       <li class="nav-item">
                         <a href="{{route('add.category')}}" class="nav-link">Add Category</a>
+                      </li>
+                      @endif
+                    </ul>
+                  </div>
+                </li>
+
+                @endif
+
+                @if (Auth::user()->can('menu.pcategory'))
+                <li class="nav-item">
+                  <a class="nav-link" data-bs-toggle="collapse" href="#property" role="button" aria-expanded="false" aria-controls="property">
+                    <i class="link-icon" data-feather="feather"></i>
+                    <span class="link-title">Property</span>
+                    <i class="link-arrow" data-feather="chevron-down"></i>
+                  </a>
+                  <div class="collapse" id="property">
+                    <ul class="nav sub-menu">
+                      
+                      @if (Auth::user()->can('all.pcategory'))
+                      <li class="nav-item">
+                        <a href="{{ route('all.property') }}" class="nav-link">All Property</a>
+                      </li>
+                      @endif
+                      @if (Auth::user()->can('add.pcategory'))
+                      <li class="nav-item">
+                        <a href="{{route('add.property')}}" class="nav-link">Add Property</a>
                       </li>
                       @endif
                     </ul>
@@ -129,6 +207,7 @@
                 @endif
 
 
+
                 @if (Auth::user()->can('menu.testimonial'))
                 <li class="nav-item">
                   <a class="nav-link" data-bs-toggle="collapse" href="#testimonial" role="button" aria-expanded="false" aria-controls="testimonial">
@@ -157,15 +236,91 @@
 
 
 
-
-               
-        
+                @if (Auth::user()->can('menu.slider'))
                 <li class="nav-item">
-                  <a href="pages/apps/chat.html" class="nav-link">
-                    <i class="link-icon" data-feather="message-square"></i>
-                    <span class="link-title">Chat</span>
+                  <a class="nav-link" data-bs-toggle="collapse" href="#partner" role="button" aria-expanded="false" aria-controls="partner">
+                    <i class="link-icon" data-feather="feather"></i>
+                    <span class="link-title">Partner</span>
+                    <i class="link-arrow" data-feather="chevron-down"></i>
                   </a>
+                  <div class="collapse" id="partner">
+                    <ul class="nav sub-menu">
+                      
+                      @if (Auth::user()->can('all.slider'))
+                      <li class="nav-item">
+                        <a href="{{ route('all.partner') }}" class="nav-link">All Partner</a>
+                      </li>
+                      @endif
+                      @if (Auth::user()->can('add.slider'))
+                      <li class="nav-item">
+                        <a href="{{ route('add.partner') }}" class="nav-link">Add Partner</a>
+                      </li>
+                      @endif
+                    </ul>
+                  </div>
                 </li>
+
+                @endif
+
+
+
+
+
+
+                @if (Auth::user()->can('menu.slider'))
+                <li class="nav-item">
+                  <a class="nav-link" data-bs-toggle="collapse" href="#blogcategory" role="button" aria-expanded="false" aria-controls="blogcategory">
+                    <i class="link-icon" data-feather="feather"></i>
+                    <span class="link-title">Blog Category</span>
+                    <i class="link-arrow" data-feather="chevron-down"></i>
+                  </a>
+                  <div class="collapse" id="blogcategory">
+                    <ul class="nav sub-menu">
+                      
+                      @if (Auth::user()->can('all.slider'))
+                      <li class="nav-item">
+                        <a href="{{ route('all.blog.category') }}" class="nav-link">All Blog Category</a>
+                      </li>
+                      @endif
+                      @if (Auth::user()->can('add.slider'))
+                      <li class="nav-item">
+                        <a href="{{ route('add.blog.category') }}" class="nav-link">Add Blog Category</a>
+                      </li>
+                      @endif
+                    </ul>
+                  </div>
+                </li>
+
+                @endif
+
+
+
+
+                @if (Auth::user()->can('menu.slider'))
+                <li class="nav-item">
+                  <a class="nav-link" data-bs-toggle="collapse" href="#blog" role="button" aria-expanded="false" aria-controls="blog">
+                    <i class="link-icon" data-feather="feather"></i>
+                    <span class="link-title">Blog </span>
+                    <i class="link-arrow" data-feather="chevron-down"></i>
+                  </a>
+                  <div class="collapse" id="blog">
+                    <ul class="nav sub-menu">
+                      
+                      @if (Auth::user()->can('all.slider'))
+                      <li class="nav-item">
+                        <a href="{{ route('all.blog') }}" class="nav-link">All Blog</a>
+                      </li>
+                      @endif
+                      @if (Auth::user()->can('add.slider'))
+                      <li class="nav-item">
+                        <a href="{{ route('add.blog') }}" class="nav-link">Add Blog</a>
+                      </li>
+                      @endif
+                    </ul>
+                  </div>
+                </li>
+
+                @endif
 
 
 

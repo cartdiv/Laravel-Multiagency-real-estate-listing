@@ -37,8 +37,13 @@
   	<!-- Plugin css for this page -->
 	  <link rel="stylesheet" href="{{asset('backend/assets/vendors/datatables.net-bs5/dataTables.bootstrap5.css')}}">
 	  <!-- End plugin css for this page -->
+	<link rel="stylesheet" href="{{asset('backend/assets/vendors/select2/select2.min.css')}}">
+	<link rel="stylesheet" href="{{asset('backend/assets/vendors/jquery-tags-input/jquery.tagsinput.min.css')}}">
   
    
+
+
+
   <link rel="shortcut icon" href="{{asset('backend/assets/images/favicon.png')}}" />
 </head>
 <body>
@@ -113,6 +118,18 @@
 
  <script src="{{ asset('backend/assets/js/code/code.js') }}"></script>
  <script src="{{ asset('backend/assets/js/code/validate.min.js') }}"></script>
+ <script src="{{ asset('backend/assets/js/select2.js') }}"></script>
+ <script src="{{ asset('backend/assets/vendors/select2/select2.min.js') }}"></script>
+ <script src="{{ asset('backend/assets/vendors/jquery-tags-input/jquery.tagsinput.min.js') }}"></script>
+ <script src="{{ asset('backend/assets/js/tags-input.js') }}"></script>
+
+ <script src="{{ asset('backend/assets/vendors/jquery-tags-input/jquery.tagsinput.min.js') }}"></script>
+
+
+
+ <script src="{{ asset('backend/assets/vendors/tinymce/tinymce.min.js') }}"></script>
+ 
+ <script src="{{ asset('backend/assets/js/tinymce.js') }}"></script>
 
 </body>
 </html>    
