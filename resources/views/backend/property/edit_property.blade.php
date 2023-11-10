@@ -106,12 +106,7 @@
 
                                         <div class="col-md-6">
                                             <label class="form-label"> Amenity</label>
-                                            <p>You can select multiple</p>
-                                            <select class="js-example-basic-multiple form-select" name="amenity" multiple="multiple" data-width="100%">
-                                                @foreach ( $amenity as $item )
-                                                <option value="{{ $item->id }}" {{ $item->id == $editData->amenity ? 'selected' : '' }}>{{ $item->amenities_name }}</option>
-                                            @endforeach
-                                            </select>
+                                             <input type="text" name="amenity" class="form-control" data-role="tagsinput" value="{{ $editData->amenity }}">
                                         </div>
 
 									</div>

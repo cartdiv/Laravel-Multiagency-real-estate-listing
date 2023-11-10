@@ -34,6 +34,7 @@
   <!-- End layout styles -->
   <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.css" >
 
+  <link href="{{asset('backend/assets/vendors/input-tags/css/tagsinput.css')}}" rel="stylesheet" />
   	<!-- Plugin css for this page -->
 	  <link rel="stylesheet" href="{{asset('backend/assets/vendors/datatables.net-bs5/dataTables.bootstrap5.css')}}">
 	  <!-- End plugin css for this page -->
@@ -126,6 +127,7 @@
  <script src="{{ asset('backend/assets/vendors/jquery-tags-input/jquery.tagsinput.min.js') }}"></script>
 
 
+ <script src="{{asset('backend/assets/vendors/input-tags/js/tagsinput.js')}}"></script>
 
  <script src="{{ asset('backend/assets/vendors/tinymce/tinymce.min.js') }}"></script>
  

@@ -21,7 +21,7 @@
 
                                         <div class="col-md-6">
                                             <label class="form-label">Property type</label>
-                                            <select class="js-example-basic-single form-select" name="category_id" data-width="100%">
+                                            <select class=" form-select"  name="category_id" data-width="100%">
 
                                                 @foreach ( $type as $item )
                                                     <option value="{{ $item->id }}">{{ $item->category_name }}</option>
@@ -41,7 +41,7 @@
 
                                         <div class="col-md-6">
                                             <label class="form-label">Place</label>
-                                            <select class="js-example-basic-single form-select" name="place_id" data-width="100%">
+                                            <select class="form-select" name="place_id" data-width="100%">
                                                 @foreach ( $places as $item )
                                                     <option value="{{ $item->id }}">{{ $item->place_name }}</option>
                                                 @endforeach
@@ -63,7 +63,7 @@
                                         <div class="col-md-6">
                                             <label class="form-label">Agency</label>
                                             
-                                            <select class="js-example-basic-multiple form-select" name="agent_id" data-width="100%">
+                                            <select class=" form-select" name="agent_id" data-width="100%">
                                                 @foreach ( $agencies as $item )
                                                     <option value="{{ $item->id }}">{{ $item->name }}</option>
                                                 @endforeach
@@ -83,7 +83,7 @@
 
                                         <div class="col-md-6">
                                             <label class="form-label">Building Type</label>
-                                            <select class="js-example-basic-multiple form-select" name="building_id" data-width="100%">
+                                            <select class=" form-select" name="building_id" data-width="100%">
                                                 @foreach ( $buildings as $item )
                                                     <option value="{{ $item->id }}">{{ $item->building_name }}</option>
                                                 @endforeach
@@ -95,7 +95,7 @@
                                     <div class="row mb-3">
 
                                         <div class="col">
-                                            <label for="exampleInputText1" class="form-label">Property tags</label>
+                                            <label for="exampleInputText1" class=" form-label">Property tags</label>
                                             <div>
                                                 <input name="property_tags" id="tags" value="Real Estate,Appartment,Sale Property,Duplex" />
                                             </div>
@@ -103,12 +103,7 @@
 
                                         <div class="col-md-6">
                                             <label class="form-label"> Amenity</label>
-                                            <p>You can select multiple</p>
-                                            <select class="js-example-basic-multiple form-select" name="amenity" multiple="multiple" data-width="100%">
-                                                @foreach ( $amenity as $item )
-                                                <option value="{{ $item->id }}">{{ $item->amenities_name }}</option>
-                                            @endforeach
-                                            </select>
+                                             <input type="text" name="amenity" class="form-control" data-role="tagsinput" value="Air Conditional, Washing Maching">
                                         </div>
 
 									</div>

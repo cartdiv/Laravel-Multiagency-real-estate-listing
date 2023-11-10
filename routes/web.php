@@ -7,6 +7,8 @@ use App\Http\Controllers\Admin\PropertyController;
 use App\Http\Controllers\Admin\SliderController;
 use App\Http\Controllers\Admin\TestimonialController;
 use App\Http\Controllers\AdminController;
+use App\Http\Controllers\AgencyMessageController;
+use App\Http\Controllers\AgencyPropertyController;
 use App\Http\Controllers\AgentController;
 use App\Http\Controllers\Backend\PropertyTypeController;
 use App\Http\Controllers\Backend\AmenitesController;
@@ -30,7 +32,7 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('frontend.index');
 });
 
 Route::get('/dashboard', function () {
@@ -123,6 +125,8 @@ Route::middleware(['auth','roles:admin'])->group(function(){
         Route::get('/edit/agent/{id}', 'EditAgent')->name('edit.agent');
         Route::post('/update/agent', 'UpdateAgent')->name('update.agent');
         Route::get('/delete/agent/{id}', 'DeleteAgent')->name('delete.agent');
+        Route::get('/inactive/agent/{id}', 'InactiveAgent')->name('inactive.agent');
+        Route::get('/active/agent/{id}', 'ActiveAgent')->name('active.agent');
 
 
 
@@ -223,9 +227,55 @@ Route::middleware(['auth','roles:admin'])->group(function(){
 
 Route::middleware(['auth','roles:agent'])->group(function(){
 
-    Route::get('/agent/dashboard', [AgentController::class, 'AgentDashboard'])->name('agent.dashboard');
+    Route::controller(AgentController::class)->group(function(){
+    
 
+        Route::get('/agent/profile', 'AgentProfile')->name('agent.profile');
+        Route::get('/edit/user/profile', 'EditAgentProfile')->name('edit.agent.profile');
+        Route::get('/agency/logout', 'AgencyLogout')->name('agent.logout');
+        Route::get('/change/agent/password', 'ChangeAgentPassword')->name('change.agent.password');
+        Route::post('/update/agent/password', 'UpdateAgentPassword')->name('update.agent.password');
+        Route::post('/update/agent/profile', 'UpdateAgentProfile')->name('update.agent.profile');
+
+
+
+
+
+        Route::get('/agent/dashboard', 'AgentDashboard')->name('agent.dashboard');
+        Route::get('/all/agency/agent', 'AllAgencyAgent')->name('all.agency.agent');
+        Route::get('/add/agency/agent', 'AddAgencyAgent')->name('add.agency.agent');
+        Route::post('/store/agency/agent', 'StoreAgencyAgent')->name('store.agency.agent');
+        Route::get('/edit/agency/agent/{id}', 'EditAgencyAgent')->name('edit.agency.agent');
+        Route::post('/update/agency/agent/', 'UpdateAgencyAgent')->name('update.agency.agent');
+        Route::get('/delete/agency/agent/{id}', 'DeleteAgencyAgent')->name('delete.agency.agent');
+
+
+
+        
+
+    });
+
+
+    Route::controller(AgencyPropertyController::class)->group(function(){
+        Route::get('/all/agency/property', 'AllAgencyProperty')->name('all.agency.property');
+        Route::get('/add/agency/property', 'AddAgencyProperty')->name('add.agency.property');
+        Route::post('/store/agency/property', 'StoreAgencyProperty')->name('store.agency.property');
+        Route::get('/edit/agency/property/{id}', 'EditAgencyProperty')->name('edit.agency.property');
+        Route::post('/update/agency/property', 'UpdateAgencyProperty')->name('update.agency.property');
+        Route::get('/delete/agency/property/{id}', 'DeleteAgencyProperty')->name('delete.agency.property');
+
+
+    });
+
+    Route::controller(AgencyMessageController::class)->group(function(){
+        Route::get('/all/agency/message', 'AllAgencyMessage')->name('all.agency.message');
+
+
+    });
+    
+    
 });
 
 Route::get('/admin/login/', [AdminController::class, 'AdminLoginOption'])->name('admin.login.option');
+Route::get('/agency/login/', [AgentController::class, 'AgentLoginOption'])->name('agent.login.option');
 require __DIR__.'/auth.php';

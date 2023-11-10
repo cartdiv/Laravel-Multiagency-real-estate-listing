@@ -282,4 +282,30 @@ class AdminController extends Controller
     # code...
   }
 
+  public function InactiveAgent($id)
+  {
+    User::findOrFail($id)->update([
+      'status'=>'inactive'
+    ]);
+    $nottification = array(
+      'message' => 'Agent Inactive Successfully',
+      'alert-type' => 'success',
+  );
+    return redirect()->route('all.agent')->with($nottification);
+    # code...
+  }
+
+  public function ActiveAgent($id)
+  {
+    User::findOrFail($id)->update([
+      'status'=>'active'
+    ]);
+    $nottification = array(
+      'message' => 'Agent Active Successfully',
+      'alert-type' => 'success',
+  );
+    return redirect()->route('all.agent')->with($nottification);
+    # code...
+  }
+
 }

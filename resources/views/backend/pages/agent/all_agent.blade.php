@@ -42,9 +42,18 @@
             <td>{{ $item->email }}</td>
             <td>{{ $item->phone }}</td>
             <td>
-               active
+                @if ($item->status == 'active')
+                <span class="badge rounded-pill bg-success">Active</span>
+                @else
+                <span class="badge rounded-pill bg-danger">Inactive</span>
+                @endif
             </td>
             <td>
+              @if ($item->status == 'active')
+              <a href="{{ route('inactive.agent',$item->id) }}" class="btn btn-primary" title="Inactive"> <i class="fa-solid fa-thumbs-down" data-feather="thumbs-down"></i> </a>
+              @else
+              <a href="{{ route('active.agent',$item->id) }}" class="btn btn-primary" title="Active"> <i class="fa-solid fa-thumbs-up" data-feather="thumbs-up"></i> </a>
+              @endif
                 <a href="{{ route('edit.agent',$item->id) }}" class="btn btn-primary mb-1 mb-md-0" title="Edit"> <i data-feather="edit"></i> </a>
                 <a href="{{ route('delete.agent',$item->id) }}" id="delete" class="btn btn-danger mb-1 mb-md-0" title="Delete"><i data-feather="trash-2"></i> </a>
             </td>
