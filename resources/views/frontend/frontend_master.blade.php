@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
 
     <!-- Favicon -->
-    <link rel="shortcut icon" type="image/x-icon" href="./{{asset('frontend/assets/images/favicon.png')}}" />
+    <link rel="shortcut icon" type="image/x-icon" href="{{asset('frontend/assets/images/favicon.png')}}" />
 
     <!-- CSS (Font, Vendor, Icon, Plugins & Style CSS files) -->
 
@@ -34,7 +34,7 @@
 
 
     <!-- Style CSS -->
-    <link rel="stylesheet" href="./{{asset('frontend/assets/css/style.css')}}" />
+    <link rel="stylesheet" href="{{asset('frontend/assets/css/style.css')}}" />
 
 </head>
 
@@ -45,8 +45,10 @@
 
         @include('frontend.body.header')
 
+        @yield('frontend.main')
 
          @include('frontend.body.newletter')
+         
 
          @include('frontend.body.footer')
 
@@ -72,6 +74,10 @@
     <script src="{{asset('frontend/assets/js/plugins/jquery.ajaxchimp.min.js')}}"></script>
     <script src="{{asset('frontend/assets/js/plugins/parallax.min.js')}}"></script>
     <script src="{{asset('frontend/assets/js/plugins/jquery.nice-select.min.js')}}"></script>
+
+
+    <script src="{{asset('frontend/assets/js/plugins/jquery.waypoints.js')}}"></script>
+    <script src="{{asset('frontend/assets/js/plugins/jquery.counterup.min.js')}}"></script>
 
     <!-- Activation JS -->
     <script src="{{asset('frontend/assets/js/main.js')}}"></script>

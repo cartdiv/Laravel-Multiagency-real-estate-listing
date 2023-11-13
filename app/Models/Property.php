@@ -9,4 +9,26 @@ class Property extends Model
 {
     use HasFactory;
     protected $guarded = [];
+
+    public function incrementPopularity()
+    {
+        $this->popularity++;
+        $this->save();
+    }
+
+    public function category()
+    {
+        return $this->belongsTo(Category::class, 'category_id','id');
+    }
+    public function agent()
+    {
+        return $this->belongsTo(Agent::class,'agent_id', 'agency_id');
+    }
+
+    
+
+    public function images()
+    {
+        # code...
+    }
 }

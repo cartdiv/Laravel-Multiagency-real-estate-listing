@@ -15,6 +15,7 @@ use App\Http\Controllers\Backend\AmenitesController;
 use App\Http\Controllers\Backend\RoleController;
 use App\Http\Controllers\BlogCategoryController;
 use App\Http\Controllers\BlogController;
+use App\Http\Controllers\Frontend\FrontendController;
 use App\Http\Controllers\PartnerController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Middleware\Role;
@@ -31,13 +32,22 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('frontend.index');
-});
-
+// Route::get('/', function () {
+//     return view('frontend.index');
+// });
 Route::get('/dashboard', function () {
     return view('dashboard');
 })->middleware(['auth', 'verified'])->name('dashboard');
+
+
+
+Route::controller(FrontendController::class)->group(function(){
+    Route::get('/', 'FrontendIndex')->name('frontend');
+    Route::get('/property/detail/{id}/{slug}', 'PropertyDetail');
+
+});
+
+
 
 Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');

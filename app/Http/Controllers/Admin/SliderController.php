@@ -10,7 +10,7 @@ use Image;
 class SliderController extends Controller
 {
     public function AllSlider() {
-        $sliders = Slider::latest()->get();
+        $sliders = Slider::orderBy('id', 'DESC')->get();
         return view('backend.slider.all_slider', compact('sliders'));
     }
 

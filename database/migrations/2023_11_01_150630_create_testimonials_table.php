@@ -16,6 +16,7 @@ return new class extends Migration
             $table->string('name');
             $table->text('testimonial_text');
             $table->string('image')->nullable();
+            $table->integer('rate')->nullable();
             $table->timestamps();
         });
     }

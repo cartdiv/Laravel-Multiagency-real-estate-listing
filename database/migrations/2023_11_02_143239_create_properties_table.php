@@ -29,6 +29,7 @@ return new class extends Migration
             $table->string('property_garage')->nullable();
             $table->integer('status')->default(0);
             $table->string('agent_id')->nullable();
+            $table->unsignedBigInteger('popularity')->default(0);
             $table->timestamps();
         });
     }
