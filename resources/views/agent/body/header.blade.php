@@ -38,16 +38,16 @@
               
             
 
-            <a href="javascript:;" class="dropdown-item d-flex align-items-center py-2">
+            <a href="{{ route('view.message',$item->id) }}" class="dropdown-item d-flex align-items-center py-2">
               <div class="me-3">
-                <img class="wd-30 ht-30 rounded-circle" src="upload/no_image.jpg" alt="userr">
+                <img class="wd-30 ht-30 rounded-circle" src="{{asset('frontend/assets/images/user/avater.png')}}" alt="userr">
               </div>
               <div class="d-flex justify-content-between flex-grow-1">
                 <div class="me-4">
-                  <p>{{ $item->first_name }} {{ $item->last_name }}</p>
+                  <p>{{ $item->frist_name }} {{ $item->last_name }}</p>
                   <p class="tx-12 text-muted">{{ $item->email }}</p>
                 </div>
-                <p class="tx-12 text-muted">{{ $item->$created_at->diffForHumans() }}</p>
+                <p class="tx-12 text-muted"> {{$item->created_at->diffForHumans() }}</p>
               </div>	
             </a>
              @empty

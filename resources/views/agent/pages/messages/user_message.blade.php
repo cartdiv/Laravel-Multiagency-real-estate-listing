@@ -35,14 +35,14 @@
             @foreach ($messages as $key => $item)
           <tr>
             <td>{{ $key+1 }}</td>
-            <td>{{ $item->first_name }} {{ $item->last_name }}</td>
-            <td>{{ $item->email }}</td>
+            <td>{{ $item->frist_name }} {{ $item->last_name }}</td>
+            <td><a href="mailto:{{ $item->email }}">{{ $item->email }}</a> </td>
             <td>{{ $item->phone }}</td>
             <td>
-              {{-- 
-                <a href="{{ route('edit.building',$item->id) }}" class="btn btn-primary mb-1 mb-md-0">view message</a>
+              
+                <a href="{{ route('view.message',$item->id) }}" class="btn btn-primary mb-1 mb-md-0">view message</a>
                 
-                 --}}
+                
               </td>
           </tr>
          

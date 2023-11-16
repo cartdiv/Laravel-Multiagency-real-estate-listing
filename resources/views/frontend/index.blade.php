@@ -640,7 +640,7 @@
 @include('frontend.home.home_property')
 
  <!-- Video Section Start -->
- <section class="video-section">
+ {{-- <section class="video-section">
     <div class="container">
         <div class="grid grid-cols-12 gap-[30px] items-center">
             <div class="col-span-12 lg:col-span-6 relative">
@@ -685,7 +685,7 @@
             </div>
         </div>
     </div>
-</section>
+</section> --}}
 <!-- Video Section End -->
 
  <!-- Featured Properties Start -->

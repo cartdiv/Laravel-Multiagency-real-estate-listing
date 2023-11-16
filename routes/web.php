@@ -44,6 +44,16 @@ Route::get('/dashboard', function () {
 Route::controller(FrontendController::class)->group(function(){
     Route::get('/', 'FrontendIndex')->name('frontend');
     Route::get('/property/detail/{id}/{slug}', 'PropertyDetail');
+    Route::post('/send/message/{id}', 'SendMessage')->name('send.message');
+    Route::get('/property', 'Property')->name('view.property');
+    Route::get('/blog', 'Blog')->name('blog');
+    Route::get('/blog/detail/{id}/{slug}', 'BlogDetail');
+    Route::get('/category/list/{id}/{slug}', 'CategoryList'); 
+    Route::get('/agencys', 'Agencys')->name('agencys');
+    Route::get('/agency/detail/{id}', 'AgencyDetail');
+    Route::get('/agent/detail/{id}', 'AgentDetail');
+
+
 
 });
 
@@ -279,6 +289,8 @@ Route::middleware(['auth','roles:agent'])->group(function(){
 
     Route::controller(AgencyMessageController::class)->group(function(){
         Route::get('/all/agency/message', 'AllAgencyMessage')->name('all.agency.message');
+        Route::get('/view/message/{id}', 'ViewdMessage')->name('view.message');
+        
 
 
     });

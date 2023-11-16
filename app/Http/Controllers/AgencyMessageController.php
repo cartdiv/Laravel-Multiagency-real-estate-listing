@@ -15,6 +15,11 @@ class AgencyMessageController extends Controller
         $messages = AgentMessages::where('agency_id', $user_id)->orderBy('id', 'DESC')->get();
         return view('agent.pages.messages.user_message', compact('messages'));
     }
-
+    public function ViewdMessage($id)
+    {
+        $messages = AgentMessages::findOrFail($id);
+        return view('agent.pages.messages.view_message', compact('messages'));
+        # code...
+    }
     //
 }

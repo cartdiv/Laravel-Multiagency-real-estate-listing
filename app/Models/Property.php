@@ -27,8 +27,9 @@ class Property extends Model
 
     
 
-    public function images()
+    public function agentinfo()
     {
+        return $this->belongsTo(User::class,'agent_id', 'id');
         # code...
     }
 }

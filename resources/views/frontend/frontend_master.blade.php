@@ -33,6 +33,7 @@
     <link rel="stylesheet" href="{{asset('frontend/assets/css/plugins/nice-select.css')}}" />
 
 
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.css" >
     <!-- Style CSS -->
     <link rel="stylesheet" href="{{asset('frontend/assets/css/style.css')}}" />
 
@@ -81,6 +82,35 @@
 
     <!-- Activation JS -->
     <script src="{{asset('frontend/assets/js/main.js')}}"></script>
+
+
+    {{-- Toaster notification --}}
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
+
+    <script>
+     @if(Session::has('message'))
+     var type = "{{ Session::get('alert-type','info') }}"
+     switch(type){
+        case 'info':
+        toastr.info(" {{ Session::get('message') }} ");
+        break;
+    
+        case 'success':
+        toastr.success(" {{ Session::get('message') }} ");
+        break;
+    
+        case 'warning':
+        toastr.warning(" {{ Session::get('message') }} ");
+        break;
+    
+        case 'error':
+        toastr.error(" {{ Session::get('message') }} ");
+        break; 
+     }
+     @endif 
+    </script>
+
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
 
 </body>
 

@@ -19,7 +19,7 @@
                            
                             <div class="swiper-slide text-center">
                                 <a href="#" class="block">
-                                    <img src="{{ $item->partner_image }}" class="w-auto h-auto block mx-auto" loading="lazy" width="125" height="109" alt="@@title">
+                                    <img src="{{ asset($item->partner_image) }}" class="w-auto h-auto block mx-auto" loading="lazy" width="125" height="109" alt="@@title">
                                 </a>
                             </div>
                             

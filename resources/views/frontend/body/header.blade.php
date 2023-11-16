@@ -14,170 +14,26 @@
 
                                
                             </li>
-                            <li class="mr-7 xl:mr-[40px] relative group py-[20px]">
+                            {{-- <li class="mr-7 xl:mr-[40px] relative group py-[20px]">
 
                                 <a href="about.html" class="transition-all hover:text-secondary">About</a>
 
-                                <ul class="list-none bg-white drop-shadow-[0px_6px_10px_rgba(0,0,0,0.2)] rounded-[12px] flex flex-wrap flex-col w-[220px] absolute top-[120%] left-1/2 -translate-x-1/2 transition-all
-    group-hover:top-[100%] invisible group-hover:visible opacity-0 group-hover:opacity-100
-    
-    ">
-                                    <li class="border-b border-dashed border-primary border-opacity-40 last:border-b-0 hover:border-solid transition-all">
-                                        <a href="about.html" class="font-recoleta leading-[1.571] text-[14px] text-primary p-[10px] capitalize block transition-all hover:bg-primary hover:text-white text-center my-[-1px] rounded-t-[12px]">about 01</a>
-                                    </li>
+                            </li> --}}
+                            <li class="mr-7 xl:mr-[40px] relative group py-[20px]">
 
-                                    <li class="border-b border-dashed border-primary border-opacity-40 last:border-b-0 hover:border-solid transition-all">
-                                        <a href="about-v2.html" class="font-recoleta leading-[1.571] text-[14px] text-primary p-[10px] capitalize block transition-all hover:bg-primary hover:text-white text-center my-[-1px] rounded-b-[12px]">about 02</a>
-                                    </li>
-                                </ul>
+                                <a href="{{route('view.property')}}" class="transition-all hover:text-secondary">Properties</a>
+                                
+                            </li>
+                           
+                            <li class="mr-7 xl:mr-[40px] relative group py-[20px]">
 
+                                <a href="{{route('agencys')}}" class="transition-all hover:text-secondary">Agency</a>
+                              
                             </li>
                             <li class="mr-7 xl:mr-[40px] relative group py-[20px]">
 
-                                <a href="#" class="transition-all hover:text-secondary">Properties</a>
-                                <ul class="list-none bg-white drop-shadow-[0px_6px_10px_rgba(0,0,0,0.2)] rounded-[12px] flex flex-wrap w-[890px] absolute top-[120%] left-1/2 translate-x-[-40%] xl:translate-x-[-45%] transition-all
-    group-hover:top-[100%] invisible group-hover:visible opacity-0 group-hover:opacity-100 px-[40px] py-[45px]
-    bg-contain bg-right-top bg-no-repeat
-    " style="background-image: url('assets/images/mega-menu/image.png');">
-
-
-                                    <li class="mr-[70px]">
-                                        <ul>
-                                            <li class="text-primary underline font-recoleta mb-[30px]">Properties</li>
-                                            <li class="mb-[25px] last:mb-0">
-                                                <a href="properties-v1.html" class="font-recoleta text-[14px] hover:text-secondary">Properties v1</a>
-                                            </li>
-                                            <li class="mb-[25px] last:mb-0">
-                                                <a href="properties-v2.html" class="font-recoleta text-[14px] hover:text-secondary">Properties v2</a>
-                                            </li>
-
-                                            <li class="mb-[25px] last:mb-0">
-                                                <a href="add-properties.html" class="font-recoleta text-[14px] hover:text-secondary">Add properties</a>
-                                            </li>
-                                        </ul>
-                                    </li>
-
-                                    <li class="mr-[70px]">
-                                        <ul>
-                                            <li class="text-primary underline font-recoleta mb-[30px]">Properties1 with sidebar</li>
-                                            <li class="mb-[25px] last:mb-0">
-                                                <a href="properties-left-side-bar.html" class="font-recoleta text-[14px] hover:text-secondary">Properties left side bar</a>
-                                            </li>
-                                            <li class="mb-[25px] last:mb-0">
-                                                <a href="properties-right-side-bar.html" class="font-recoleta text-[14px] hover:text-secondary">Properties right side bar</a>
-                                            </li>
-
-                                            <li class="mb-[25px] last:mb-0">
-                                                <a href="properties-list-left-side-bar.html" class="font-recoleta text-[14px] hover:text-secondary">Properties list left side bar</a>
-                                            </li>
-
-                                            <li class="mb-[25px] last:mb-0">
-                                                <a href="properties-list-right-side-bar.html" class="font-recoleta text-[14px] hover:text-secondary">Properties list
-                                                    right side bar</a>
-                                            </li>
-                                        </ul>
-                                    </li>
-
-
-                                    <li>
-                                        <ul>
-                                            <li class="text-primary underline font-recoleta mb-[30px]">Property Details</li>
-                                            <li class="mb-[25px] last:mb-0">
-                                                <a href="add-properties.html" class="font-recoleta text-[14px] hover:text-secondary">Add properties</a>
-                                            </li>
-
-                                            <li class="mb-[25px] last:mb-0">
-                                                <a href="properties-details.html" class="font-recoleta text-[14px] hover:text-secondary">Properties details</a>
-                                            </li>
-
-                                        </ul>
-                                    </li>
-
-                                </ul>
-                            </li>
-                            <li class="mr-7 xl:mr-[40px] relative group py-[20px]">
-
-                                <a href="#" class="transition-all hover:text-secondary">Pages</a>
-                                <ul class="list-none bg-white drop-shadow-[0px_6px_10px_rgba(0,0,0,0.2)] rounded-[12px] flex flex-wrap flex-col w-[220px] absolute top-[120%] left-1/2 -translate-x-1/2 transition-all
-    group-hover:top-[100%] invisible group-hover:visible opacity-0 group-hover:opacity-100
-    
-    ">
-
-                                    <li class="border-b border-dashed border-primary border-opacity-40 last:border-b-0 hover:border-solid transition-all">
-                                        <a href="service.html" class="font-recoleta leading-[1.571] text-[14px] text-primary p-[10px] capitalize block transition-all hover:bg-primary hover:text-white text-center my-[-1px] rounded-t-[12px]">Service</a>
-                                    </li>
-
-                                    <li class="border-b border-dashed border-primary border-opacity-40 last:border-b-0 hover:border-solid transition-all">
-                                        <a href="single-service.html" class="font-recoleta leading-[1.571] text-[14px] text-primary p-[10px] capitalize block transition-all hover:bg-primary hover:text-white text-center my-[-1px]">single service</a>
-                                    </li>
-
-                                    <li class="border-b border-dashed border-primary border-opacity-40 last:border-b-0 hover:border-solid transition-all">
-                                        <a href="login.html" class="font-recoleta leading-[1.571] text-[14px] text-primary p-[10px] capitalize block transition-all hover:bg-primary hover:text-white text-center my-[-1px]">login</a>
-                                    </li>
-                                    <li class="border-b border-dashed border-primary border-opacity-40 last:border-b-0 hover:border-solid transition-all">
-                                        <a href="register.html" class="font-recoleta leading-[1.571] text-[14px] text-primary p-[10px] capitalize block transition-all hover:bg-primary hover:text-white text-center my-[-1px] rounded-b-[12px]">register</a>
-                                    </li>
-                                </ul>
-                            </li>
-                            <li class="mr-7 xl:mr-[40px] relative group py-[20px]">
-
-                                <a href="agency.html" class="transition-all hover:text-secondary">Agency</a>
-                                <ul class="list-none bg-white drop-shadow-[0px_6px_10px_rgba(0,0,0,0.2)] rounded-[12px] flex flex-wrap flex-col w-[220px] absolute top-[120%] left-1/2 -translate-x-1/2 transition-all
-    group-hover:top-[100%] invisible group-hover:visible opacity-0 group-hover:opacity-100
-    
-    ">
-                                    <li class="border-b border-dashed border-primary border-opacity-40 last:border-b-0 hover:border-solid transition-all">
-                                        <a href="agency.html" class="font-recoleta leading-[1.571] text-[14px] text-primary p-[10px] capitalize block transition-all hover:bg-primary hover:text-white text-center my-[-1px] rounded-t-[12px]">agency</a>
-                                    </li>
-                                    <li class="border-b border-dashed border-primary border-opacity-40 last:border-b-0 hover:border-solid transition-all">
-                                        <a href="create-agency.html" class="font-recoleta leading-[1.571] text-[14px] text-primary p-[10px] capitalize block transition-all hover:bg-primary hover:text-white text-center my-[-1px]">create
-                                            agency</a>
-                                    </li>
-
-                                    <li class="border-b border-dashed border-primary border-opacity-40 last:border-b-0 hover:border-solid transition-all">
-                                        <a href="agent.html" class="font-recoleta leading-[1.571] text-[14px] text-primary p-[10px] capitalize block transition-all hover:bg-primary hover:text-white text-center my-[-1px]">agent</a>
-                                    </li>
-
-                                    <li class="border-b border-dashed border-primary border-opacity-40 last:border-b-0 hover:border-solid transition-all">
-                                        <a href="agency-details.html" class="font-recoleta leading-[1.571] text-[14px] text-primary p-[10px] capitalize block transition-all hover:bg-primary hover:text-white text-center my-[-1px]">agency
-                                            details</a>
-                                    </li>
-
-                                    <li class="border-b border-dashed border-primary border-opacity-40 last:border-b-0 hover:border-solid transition-all">
-                                        <a href="agent-details.html" class="font-recoleta leading-[1.571] text-[14px] text-primary p-[10px] capitalize block transition-all hover:bg-primary hover:text-white text-center my-[-1px] rounded-b-[12px]">agent
-                                            details</a>
-                                    </li>
-
-                                </ul>
-
-
-                            </li>
-                            <li class="mr-7 xl:mr-[40px] relative group py-[20px]">
-
-                                <a href="#" class="transition-all hover:text-secondary">Blog</a>
-                                <ul class="list-none bg-white drop-shadow-[0px_6px_10px_rgba(0,0,0,0.2)] rounded-[12px] flex flex-wrap flex-col w-[220px] absolute top-[120%] left-1/2 -translate-x-1/2 transition-all
-    group-hover:top-[100%] invisible group-hover:visible opacity-0 group-hover:opacity-100
-    
-    ">
-                                    <li class="border-b border-dashed border-primary border-opacity-40 last:border-b-0 hover:border-solid transition-all">
-                                        <a href="blog-grid.html" class="font-recoleta leading-[1.571] text-[14px] text-primary p-[10px] capitalize block transition-all hover:bg-primary hover:text-white text-center my-[-1px] rounded-t-[12px]">blog
-                                            grid</a>
-                                    </li>
-                                    <li class="border-b border-dashed border-primary border-opacity-40 last:border-b-0 hover:border-solid transition-all">
-                                        <a href="blog-grid-left-side-bar.html" class="font-recoleta leading-[1.571] text-[14px] text-primary p-[10px] capitalize block transition-all hover:bg-primary hover:text-white text-center my-[-1px]">blog
-                                            grid left side bar</a>
-                                    </li>
-                                    <li class="border-b border-dashed border-primary border-opacity-40 last:border-b-0 hover:border-solid transition-all">
-                                        <a href="blog-grid-right-side-bar.html" class="font-recoleta leading-[1.571] text-[14px] text-primary p-[10px] capitalize block transition-all hover:bg-primary hover:text-white text-center my-[-1px]">blog
-                                            grid right side bar</a>
-                                    </li>
-                                    <li class="border-b border-dashed border-primary border-opacity-40 last:border-b-0 hover:border-solid transition-all">
-                                        <a href="blog-details.html" class="font-recoleta leading-[1.571] text-[14px] text-primary p-[10px] capitalize block transition-all hover:bg-primary hover:text-white text-center my-[-1px] rounded-b-[12px]">blog
-                                            details</a>
-                                    </li>
-
-                                </ul>
-
+                                <a href="{{route('blog')}}" class="transition-all hover:text-secondary">Blog</a>
+                                
                             </li>
                             <li class="mr-7 xl:mr-[40px] relative group py-[20px]">
 
