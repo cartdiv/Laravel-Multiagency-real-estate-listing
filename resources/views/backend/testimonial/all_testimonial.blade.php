@@ -24,6 +24,7 @@
           <tr>
             <th>Sl</th>
             <th>Testimonial name</th>
+            <th>Stars</th>
             <th>Testimonial image</th>
             <th>Action</th>
           </tr>
@@ -34,6 +35,7 @@
           <tr>
             <td>{{ $key+1 }}</td>
             <td>{{ $item->name }}</td>
+            <td>{{ $item->rate }}</td>
             <td> <img src="{{ asset($item->image) }}" style="width: 70px; height:40px;" >  </td>
             <td>
               @if (Auth::user()->can('edit.testimonial'))

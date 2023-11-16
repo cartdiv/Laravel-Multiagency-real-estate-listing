@@ -32,6 +32,7 @@ class TestimonialController extends Controller
     
         Testimonial::insert([
             'name' => $request->name,
+            'rate' => $request->rate,
             'testimonial_text' => $request->testimonial_text,
             'image' => $save_url, 
         ]);
@@ -74,6 +75,7 @@ class TestimonialController extends Controller
 
          Testimonial::findOrFail($testimonial_id)->update([
             'name' => $request->name,
+            'rate' => $request->rate,
             'testimonial_text' => $request->testimonial_text,
             'image' => $save_url, 
         ]);
@@ -88,6 +90,7 @@ class TestimonialController extends Controller
         }else{
             Testimonial::findOrFail($testimonial_id)->update([
                 'name' => $request->name,
+                'rate' => $request->rate,
                 'testimonial_text' => $request->testimonial_text,
             ]);
         

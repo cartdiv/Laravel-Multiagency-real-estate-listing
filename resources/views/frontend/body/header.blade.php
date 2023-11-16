@@ -3,7 +3,7 @@
         <div class="grid grid-cols-12">
             <div class="col-span-12">
                 <div class="flex flex-wrap items-center justify-between">
-                    <a href="index.html" class="block">
+                    <a href="{{route('frontend')}}" class="block">
                         <img class="w-full h-full" src="{{asset('frontend/assets/images/logo/logo.svg')}}" loading="lazy" width="99" height="46" alt="brand logo">
                     </a>
                     <nav class="flex flex-wrap items-center">
@@ -111,153 +111,23 @@
 
                  </li>
                  <li class="relative block border-b-primary border-b">
-                     <a href="#" class="block capitalize font-normal text-black hover:text-secondary text-base my-2 py-1 px-5">Properties</a>
-                     <ul class="offcanvas-submenu static top-auto hidden w-full visible opacity-100 capitalize">
-                         <li>
-                             <a class="text-sm py-2 px-[30px] text-black font-light block transition-all hover:text-secondary" href="#">Properties</a>
-                             <ul class="offcanvas-submenu static top-auto hidden w-full visible opacity-100 capitalize">
-
-
-
-                                 <li>
-                                     <a class="text-sm pt-3 px-10 pb-1 text-black font-light block transition-all hover:text-secondary" href="properties-v1.html"> properties v1</a>
-                                 </li>
-                                 <li>
-                                     <a class="text-sm pt-3 px-10 pb-1 text-black font-light block transition-all hover:text-secondary" href="properties-v2.html"> properties v2</a>
-                                 </li>
-                                 <li>
-                                     <a class="text-sm pt-3 px-10 pb-1 text-black font-light block transition-all hover:text-secondary" href="add-properties.html">add properties </a>
-                                 </li>
-
-                             </ul>
-                         </li>
-                         <li>
-                             <a class="text-sm py-2 px-[30px] text-black font-light block transition-all hover:text-secondary" href="#">Properties with sidebar</a>
-                             <ul class="offcanvas-submenu static top-auto hidden w-full visible opacity-100 capitalize">
-
-                                 <li>
-                                     <a href="properties-left-side-bar.html" class="text-sm pt-3 px-10 pb-1 text-black font-light block transition-all hover:text-secondary">properties
-                                         left side bar</a>
-                                 </li>
-                                 <li>
-                                     <a href="properties-right-side-bar.html" class="text-sm pt-3 px-10 pb-1 text-black font-light block transition-all hover:text-secondary">properties
-                                         right side bar</a>
-                                 </li>
-
-                                 <li>
-                                     <a href="properties-list-left-side-bar.html" class="text-sm pt-3 px-10 pb-1 text-black font-light block transition-all hover:text-secondary">properties
-                                         list left side bar</a>
-                                 </li>
-
-                                 <li>
-                                     <a href="properties-list-right-side-bar.html" class="text-sm pt-3 px-10 pb-1 text-black font-light block transition-all hover:text-secondary">properties
-                                         list
-                                         right side bar</a>
-                                 </li>
-                             </ul>
-
-
-                         </li>
-                         <li>
-                             <a class="text-sm py-2 px-[30px] text-black font-light block transition-all hover:text-secondary" href="#">Property Details</a>
-
-                             <ul class="offcanvas-submenu static top-auto hidden w-full visible opacity-100 capitalize">
-
-                                 <li>
-                                     <a href="add-properties.html" class="text-sm pt-3 px-10 pb-1 text-black font-light block transition-all hover:text-secondary">add
-                                         properties</a>
-                                 </li>
-
-                                 <li>
-                                     <a href="properties-details.html" class="text-sm pt-3 px-10 pb-1 text-black font-light block transition-all hover:text-secondary">properties
-                                         details</a>
-                                 </li>
-
-                             </ul>
-
-                         </li>
-
-                     </ul>
+                     <a href="{{route('view.property')}}" class="block capitalize font-normal text-black hover:text-secondary text-base my-2 py-1 px-5">Properties</a>
+                     
                  </li>
-                 <li class="relative block border-b-primary border-b"><a href="#" class="relative block capitalize font-normal text-black hover:text-secondary text-base my-2 py-1 px-5">Pages</a>
+                
 
-                     <ul class="offcanvas-submenu static top-auto hidden w-full visible opacity-100 capitalize">
-                         <li>
-                             <a href="service.html" class="text-sm pt-3 px-10 pb-1 text-black font-light block transition-all hover:text-secondary">Service</a>
-                         </li>
-                         <li>
-                             <a href="single-service.html" class="text-sm pt-3 px-10 pb-1 text-black font-light block transition-all hover:text-secondary">single service</a>
-                         </li>
-                         <li>
-                             <a href="contact-us.html" class="text-sm pt-3 px-10 pb-1 text-black font-light block transition-all hover:text-secondary">contact
-                                 us</a>
-                         </li>
-                         <li>
-                             <a href="create-agency.html" class="text-sm pt-3 px-10 pb-1 text-black font-light block transition-all hover:text-secondary">create
-                                 agency</a>
-                         </li>
-                         <li>
-                             <a href="login.html" class="text-sm pt-3 px-10 pb-1 text-black font-light block transition-all hover:text-secondary">login</a>
-                         </li>
-                         <li>
-                             <a href="register.html" class="text-sm pt-3 px-10 pb-1 text-black font-light block transition-all hover:text-secondary">register</a>
-                         </li>
-                     </ul>
-                 </li>
+                 <li class="relative block border-b-primary border-b"><a href="{{route('agencys')}}" class="relative block capitalize font-normal text-black hover:text-secondary text-base my-2 py-1 px-5">agency</a>
 
-                 <li class="relative block border-b-primary border-b"><a href="#" class="relative block capitalize font-normal text-black hover:text-secondary text-base my-2 py-1 px-5">agency</a>
-
-                     <ul class="offcanvas-submenu static top-auto hidden w-full visible opacity-100 capitalize">
-                         <li>
-                             <a href="agency.html" class="text-sm pt-3 px-10 pb-1 text-black font-light block transition-all hover:text-secondary">agency</a>
-                         </li>
-                         <li>
-                             <a href="create-agency.html" class="text-sm pt-3 px-10 pb-1 text-black font-light block transition-all hover:text-secondary">create
-                                 agency</a>
-                         </li>
-
-                         <li>
-                             <a href="agent.html" class="text-sm pt-3 px-10 pb-1 text-black font-light block transition-all hover:text-secondary">agent</a>
-                         </li>
-
-                         <li>
-                             <a href="agency-details.html" class="text-sm pt-3 px-10 pb-1 text-black font-light block transition-all hover:text-secondary">agency
-                                 details</a>
-                         </li>
-
-                         <li>
-                             <a href="agent-details.html" class="text-sm pt-3 px-10 pb-1 text-black font-light block transition-all hover:text-secondary">agent
-                                 details</a>
-                         </li>
-
-                     </ul>
+                
 
                  </li>
 
-                 <li class="relative block border-b-primary border-b"><a href="#" class="relative block capitalize text-black hover:text-secondary text-base my-2 py-1 px-5">Blog</a>
+                 <li class="relative block border-b-primary border-b"><a href="{{route('blog')}}" class="relative block capitalize text-black hover:text-secondary text-base my-2 py-1 px-5">Blog</a>
 
 
 
 
-                     <ul class="offcanvas-submenu static top-auto hidden w-full visible opacity-100 capitalize">
-                         <li>
-                             <a href="blog-grid.html" class="text-sm py-2 px-[30px] text-black font-light block transition-all hover:text-secondary">blog
-                                 grid</a>
-                         </li>
-                         <li>
-                             <a href="blog-grid-left-side-bar.html" class="text-sm py-2 px-[30px] text-black font-light block transition-all hover:text-secondary">blog
-                                 grid left side bar</a>
-                         </li>
-                         <li>
-                             <a href="blog-grid-right-side-bar.html" class="text-sm py-2 px-[30px] text-black font-light block transition-all hover:text-secondary">blog
-                                 grid right side bar</a>
-                         </li>
-                         <li>
-                             <a href="blog-details.html" class="text-sm py-2 px-[30px] text-black font-light block transition-all hover:text-secondary">blog
-                                 details</a>
-                         </li>
-
-                     </ul>
+                  
                  </li>
                  <li class="relative block border-b-primary border-b"><a href="contact.html" class="relative block capitalize text-black hover:text-secondary text-base my-2 py-1 px-5">Contact</a></li>
              </ul>

@@ -21,6 +21,10 @@
                                         <textarea id="maxlength-textarea" class="form-control"  name="testimonial_text" rows="8" ></textarea>
 									</div>
                                     <div class="mb-3">
+										<label for="exampleInputText1" class="form-label">Stars</label>
+										<input type="text" class="form-control" id="exampleInputText1" name="rate" >
+									</div>
+                                    <div class="mb-3">
 										<label for="exampleInputText1" class="form-label">Image</label>
 										<div class="col-sm-9 text-secondary">
                                             <input type="file" name="image" class="form-control"  id="image"   />
