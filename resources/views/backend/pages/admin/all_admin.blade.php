@@ -47,9 +47,13 @@
                 @endforeach
             </td>
             <td>
+              @if (Auth::user()->can('edit.admin'))
                 <a href="{{ route('edit.admin',$item->id) }}" class="btn btn-primary mb-1 mb-md-0" title="Edit"> <i data-feather="edit"></i> </a>
+                @endif
+                @if (Auth::user()->can('delete.admin'))
                 <a href="{{ route('delete.admin',$item->id) }}" id="delete" class="btn btn-danger mb-1 mb-md-0" title="Delete"><i data-feather="trash-2"></i> </a>
-            </td>
+                @endif
+              </td>
           </tr>
          
           @endforeach

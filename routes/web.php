@@ -52,6 +52,9 @@ Route::controller(FrontendController::class)->group(function(){
     Route::get('/agencys', 'Agencys')->name('agencys');
     Route::get('/agency/detail/{id}', 'AgencyDetail');
     Route::get('/agent/detail/{id}', 'AgentDetail');
+    Route::get('/agency/registration', 'AgentReg')->name('agent.register');
+    Route::post('/store/agency/registration', 'StoreAgentReg')->name('store.agent.register');
+
 
 
 

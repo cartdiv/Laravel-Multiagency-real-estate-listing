@@ -14,6 +14,7 @@ use App\Models\BlogCategory;
 use App\Models\User;
 use Carbon\Carbon;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Hash;
 
 class FrontendController extends Controller
 {
@@ -106,6 +107,36 @@ class FrontendController extends Controller
     {
         $agentDetail = Agent::findOrFail($id);
         return view('frontend.page.view_agent', compact('agentDetail'));
+        # code...
+    }
+
+    public function AgentReg()
+    {
+        return view('agent.agent_register');
+        # code...
+    }
+
+    public function StoreAgentReg(Request $request)
+    {
+        User::insert([
+            'name' => $request->name,
+            'email' => $request->email,
+            'username' => $request->username,
+            'address' => $request->address,
+            'phone' => $request->phone,
+            'password' =>  Hash::make($request->password),
+            'role' => 'agent',
+            'status' => 'inactive',
+            'created_at' => Carbon::now(),
+        ]);
+      
+        
+        # code...
+        $nottification = array(
+            'message' => 'You account as been created Successfully',
+            'alert-type' => 'success',
+        );
+        return redirect()->route('agent.login.option')->with($nottification);
         # code...
     }
     //

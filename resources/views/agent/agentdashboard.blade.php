@@ -11,7 +11,7 @@
     @if ( $status == 'inactive')
 
 
-        <h2>Your Accout is still <span class="text-success">INACTIVE</span></h2>
+        <h2>Your Accout is <span class="text-success">INACTIVE</span></h2>
 
     @else
         

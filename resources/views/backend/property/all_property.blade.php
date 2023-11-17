@@ -47,10 +47,10 @@
             </td>
             
             <td>
-              @if (Auth::user()->can('edit.slider'))
+              @if (Auth::user()->can('edit.property'))
                 <a href="{{ route('edit.property',$item->id) }}" class="btn btn-primary mb-1 mb-md-0">Edit</a>
                 @endif
-                @if (Auth::user()->can('delete.slider'))
+                @if (Auth::user()->can('delete.property'))
                 <a href="{{ route('delete.property',$item->id) }}" id="delete" class="btn btn-danger mb-1 mb-md-0">Delete</a>
                 @endif
 

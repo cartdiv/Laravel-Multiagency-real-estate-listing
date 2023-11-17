@@ -54,9 +54,13 @@
               @else
               <a href="{{ route('active.agent',$item->id) }}" class="btn btn-primary" title="Active"> <i class="fa-solid fa-thumbs-up" data-feather="thumbs-up"></i> </a>
               @endif
+              @if (Auth::user()->can('edit.agent'))
                 <a href="{{ route('edit.agent',$item->id) }}" class="btn btn-primary mb-1 mb-md-0" title="Edit"> <i data-feather="edit"></i> </a>
+                @endif
+                @if (Auth::user()->can('delete.agent'))
                 <a href="{{ route('delete.agent',$item->id) }}" id="delete" class="btn btn-danger mb-1 mb-md-0" title="Delete"><i data-feather="trash-2"></i> </a>
-            </td>
+                @endif
+              </td>
           </tr>
          
           @endforeach

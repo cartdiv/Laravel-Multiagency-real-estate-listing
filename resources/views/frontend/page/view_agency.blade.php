@@ -7,7 +7,7 @@
         <div class="grid sm:grid-cols-12 gap-[30px]">
             <div class="col-span-12 lg:col-span-5 xl:col-span-6">
                 <div class="p-[30px] drop-shadow-[0px_2px_15px_rgba(0,0,0,0.1)] bg-[#FFFDFC]">
-                    <img class="self-center mb-[15px] w-full h-full" src="{{ (!empty($item->photo))?url('upload/agent_photo/'.$item->photo):url('upload/no_image.jpg') }}" width="499" height="988" loading="lazy" alt="brand logo">
+                    <img class="self-center mb-[15px] w-full h-full" src="{{ (!empty($agencyDetail->photo))?url('upload/agent_photo/'.$agencyDetail->photo):url('upload/no_image.jpg') }}" width="499" height="988" loading="lazy" alt="brand logo">
 
                 </div>
             </div>

@@ -61,11 +61,11 @@
                           <x-input-error :messages="$errors->get('password')" class="mt-2" style="color: red;" />
                         <div class="mb-3">
                         <label for="userEmail" class="form-label">Email/Name/Phone</label>
-                        <input type="text" class="form-control" name="login" id="userEmail" placeholder="Email">
+                        <input type="text" class="form-control" name="login" id="userEmail" value="agent@gmail.com">
                       </div>
                       <div class="mb-3">
                         <label for="userPassword" class="form-label">Password</label>
-                        <input type="password" class="form-control"  name="password" id="userPassword" autocomplete="current-password" placeholder="Password">
+                        <input type="password" class="form-control"  name="password" id="userPassword" autocomplete="current-password" value="111">
                       </div>
                       <div class="form-check mb-3">
                         <input type="checkbox" class="form-check-input" id="authCheck">

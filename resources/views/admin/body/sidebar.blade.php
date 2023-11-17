@@ -147,7 +147,7 @@
 
                 @endif
 
-                @if (Auth::user()->can('menu.pcategory'))
+                @if (Auth::user()->can('menu.property'))
                 <li class="nav-item">
                   <a class="nav-link" data-bs-toggle="collapse" href="#property" role="button" aria-expanded="false" aria-controls="property">
                     <i class="link-icon" data-feather="feather"></i>
@@ -157,12 +157,12 @@
                   <div class="collapse" id="property">
                     <ul class="nav sub-menu">
                       
-                      @if (Auth::user()->can('all.pcategory'))
+                      @if (Auth::user()->can('all.property'))
                       <li class="nav-item">
                         <a href="{{ route('all.property') }}" class="nav-link">All Property</a>
                       </li>
                       @endif
-                      @if (Auth::user()->can('add.pcategory'))
+                      @if (Auth::user()->can('add.property'))
                       <li class="nav-item">
                         <a href="{{route('add.property')}}" class="nav-link">Add Property</a>
                       </li>
@@ -325,9 +325,9 @@
 
 
 
-
+               
                 {{-- Role And Permission --}}
-                
+                @if (Auth::user()->can('auth.permission'))
                 <li class="nav-item nav-category">Role And Permission</li>
                 <li class="nav-item">
                   <a class="nav-link" data-bs-toggle="collapse" href="#roles" role="button" aria-expanded="false" aria-controls="emails">
@@ -352,7 +352,7 @@
                     </ul>
                   </div>
                 </li>
-
+                @endif
 
                 <li class="nav-item">
                   <a class="nav-link" data-bs-toggle="collapse" href="#admin" role="button" aria-expanded="false" aria-controls="emails">

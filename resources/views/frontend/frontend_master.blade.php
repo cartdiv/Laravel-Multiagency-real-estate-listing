@@ -75,6 +75,7 @@
     <script src="{{asset('frontend/assets/js/plugins/jquery.ajaxchimp.min.js')}}"></script>
     <script src="{{asset('frontend/assets/js/plugins/parallax.min.js')}}"></script>
     <script src="{{asset('frontend/assets/js/plugins/jquery.nice-select.min.js')}}"></script>
+    <script src="{{ asset('backend/assets/js/code/validate.min.js') }}"></script>
 
 
     <script src="{{asset('frontend/assets/js/plugins/jquery.waypoints.js')}}"></script>

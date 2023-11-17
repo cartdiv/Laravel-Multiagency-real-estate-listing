@@ -37,7 +37,7 @@
                             </li>
                             <li class="mr-7 xl:mr-[40px] relative group py-[20px]">
 
-                                <a href="contact-us.html" class="transition-all hover:text-secondary">Contact</a>
+                                <a href="#" class="transition-all hover:text-secondary">Contact</a>
 
                             </li>
                         </ul>
@@ -47,7 +47,7 @@
                                     <img src="{{asset('frontend/assets/images/user/avater.png')}}" loading="lazy" width="62" height="62" alt="avater">
                                 </a>
 
-                                <ul class="list-none bg-white drop-shadow-[0px_6px_10px_rgba(0,0,0,0.2)] rounded-[12px] flex flex-wrap flex-col w-[180px] absolute top-[120%] sm:left-1/2 sm:-translate-x-1/2 transition-all
+                                {{-- <ul class="list-none bg-white drop-shadow-[0px_6px_10px_rgba(0,0,0,0.2)] rounded-[12px] flex flex-wrap flex-col w-[180px] absolute top-[120%] sm:left-1/2 sm:-translate-x-1/2 transition-all
         group-hover:top-[60px] invisible group-hover:visible opacity-0 group-hover:opacity-100 right-0
         
         ">
@@ -60,11 +60,10 @@
                                     </li>
 
 
-                                </ul>
+                                </ul> --}}
                             </li>
                             <li>
-                                <a href="add-properties.html" class="before:rounded-md before:block before:absolute before:left-auto before:right-0 before:inset-y-0 before:-z-[1] before:bg-secondary before:w-0 hover:before:w-full hover:before:left-0 hover:before:right-auto before:transition-all leading-none px-[20px] py-[15px] capitalize font-medium text-white hidden sm:block text-[14px] xl:text-[16px] relative after:block after:absolute after:inset-0 after:-z-[2] after:bg-primary after:rounded-md after:transition-all">Add
-                                    Property</a>
+                                <a href="{{route('agent.register')}}" class="before:rounded-md before:block before:absolute before:left-auto before:right-0 before:inset-y-0 before:-z-[1] before:bg-secondary before:w-0 hover:before:w-full hover:before:left-0 hover:before:right-auto before:transition-all leading-none px-[20px] py-[15px] capitalize font-medium text-white hidden sm:block text-[14px] xl:text-[16px] relative after:block after:absolute after:inset-0 after:-z-[2] after:bg-primary after:rounded-md after:transition-all">Become Agency</a>
                             </li>
                             <li class="ml-2 sm:ml-5 lg:hidden">
                                 <a href="#offcanvas-mobile-menu" class="offcanvas-toggle flex text-[#016450] hover:text-secondary">

@@ -13,7 +13,7 @@
             </figure>
             <div class="d-flex justify-content-between align-items-center position-absolute top-90 w-100 px-2 px-md-4 mt-n4">
               <div>
-                <img class="wd-70 rounded-circle" src="{{ (!empty($admin_data->photo))? url('upload/admin_photo/'.$admin_data->photo): url('upload/no_image.jpg') }}" alt="profile">
+                <img class="wd-100 rounded-circle" src="{{ (!empty($admin_data->photo))? url('upload/agent_photo/'.$admin_data->photo): url('upload/no_image.jpg') }}" alt="profile">
                 <span class="h4 ms-3 text-dark">{{$admin_data->name}}</span>
               </div>
               <div class="d-none d-md-block">
